@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Kanit&family=Roboto+Condensed:ital,wght@1,300;1,400&display=swap');
+
+:root{
+    --font: 'Kanit', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    color: whitesmoke;
+}
+
+.wrapper{
+    background-image: linear-gradient(#512B81, #7753a1);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-family: var(--font);
+    color: aliceblue;
+}
+
+.result{
+    background-color: #35155D;
+    width: 20%;
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.3rem #8660b1;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#generated-password{
+    width: 90%;
+    background-color: #35155D;
+    border: none;
+    font-family: var(--font);
+    padding-left: 1rem;
+    font-size: 1.3rem;
+}
+
+#generated-password::placeholder{
+    color: rgb(192, 192, 103);
+    font-weight: bolder;
+}
+
+.copy-button{
+    width: 10%;
+    border: none;
+    background-color: #35155D;
+    position: relative;
+}
+
+[copied]{
+    opacity: 0;
+    position: absolute;
+    bottom: 100%;
+    right: 0%;
+    border: 1px solid black;
+    border-radius: 20%;
+    padding: 0.2rem;
+    background-color: #a981d4;
+    transition: all 250ms;
+}
+
+.active{
+    opacity: 1;
+}
+
+.card{
+    background-color: #35155D;
+    width: 20%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.3rem #8660b1;
+    margin: 0.5rem 0;
+}
+
+.lengthBox{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    font-family: var(--font);
+}
+
+[lengthVal]{
+    color: yellow;
+}
+
+#length-slider{
+    width: 95%;
+    height: 0.6rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.8rem;
+    appearance: none;
+    background-color: #8f77b3;
+    background-image: linear-gradient(#9f55fa, #512B81);
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+#length-slider:focus{
+    outline: solid 2px yellow;
+}
+
+#length-slider::-webkit-slider-thumb{
+    appearance: none;
+    background: yellow;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 1px rgba(255, 229, 61, 0.50);
+    transition: all 100ms ease-in;
+}
+
+#length-slider::-webkit-slider-thumb:hover{
+    outline: 2px solid yellow;
+    background-color: #35155D;
+    position: relative;
+    box-shadow: 0 0 25px 0 rgba(255, 229, 61, 0.80);
+}
+
+.checkBox{
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input[type=checkbox]{
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background: transparent;
+    border: 1px solid whitesmoke;
+    border-radius: 0.3rem;
+    position: relative;
+}
+
+input[type=checkbox]:checked{
+    background: aqua;
+}
+
+input[type=checkbox]:checked::before{
+    content: "🗸";
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
+    position:absolute;
+    bottom: -60%;
+}
+
+.strength{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.generate-button{
+    width: 100%;
+    background-color: #8660b1;
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.3rem rgb(192, 192, 103);
+    margin: 0.5rem 0;
+}
